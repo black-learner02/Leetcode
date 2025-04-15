@@ -45,7 +45,7 @@ class Solution {
             {
                 count=0;
             }
-            if(count==k)
+             if(count==k)
             {
                ans++;
                count=0;
