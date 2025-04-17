@@ -24,9 +24,9 @@ class Solution {
 
     }
 
-    public static int check(int[] arr,int mid)
+    public static double check(int[] arr,int mid)
     {
-        int sum=0;
+        double sum=0;
         for(int i=0;i<arr.length;i++)
         {
             sum+=Math.ceil((double)arr[i]/mid);
