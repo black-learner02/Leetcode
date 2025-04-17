@@ -3,7 +3,6 @@ class Solution {
     
       int low=1;
       int high=max(nums);
-    //  double min=threshold;
       int ans=0;
 
       while(low<=high)
@@ -13,7 +12,6 @@ class Solution {
         if(check(nums,mid)<=threshold)
         {
          ans=mid;
-      //   min=check(nums,mid);
          high=mid-1;
         }
         else
