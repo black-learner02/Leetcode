@@ -3,9 +3,9 @@ class Solution {
 
         for(int i=0;i<matrix.length;i++)
         {
-            if(find(matrix[i],target)==true)
+            if(matrix[i][0]<=target && target<=matrix[i][matrix[i].length-1])
             {
-                return true;
+                return find(matrix[i],target);
             }
         }
 
