@@ -13,7 +13,7 @@ class Solution {
                 return true;
                }
 
-                 System.out.println(ran);
+                
             }
 
         return false;
