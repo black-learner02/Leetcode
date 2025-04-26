@@ -3,7 +3,7 @@ class Solution {
 
          HashMap<Character,Integer> map = new HashMap<>();
 
-         String res="";
+         StringBuilder res=new StringBuilder();
 
          for(int i=0;i<s.length();i++)
          {
@@ -22,11 +22,11 @@ class Solution {
 
             for(int i=0;i<end;i++)
             {
-                res+=entry.getKey();
+                res.append(entry.getKey());
             }
          }
 
-         return res;
+         return res.toString();
         
     }
 }
