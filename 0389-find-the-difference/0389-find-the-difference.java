@@ -5,18 +5,20 @@ class Solution {
 
         for(int i=0;i<s.length();i++)
         {
-            arr[s.charAt(i)-'a']++;
+            char ch=s.charAt(i);
+            arr[ch-'a']++;
         }
 
         for(int i=0;i<t.length();i++)
         {
-            if(arr[t.charAt(i)-'a']==0)
+            char ch=t.charAt(i);
+            if(arr[ch-'a']==0)
             {
                 return t.charAt(i);
             }
             else
             {
-               arr[t.charAt(i)-'a']--;
+               arr[ch-'a']--;
             }
         }
 
