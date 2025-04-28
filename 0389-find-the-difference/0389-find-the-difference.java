@@ -16,7 +16,7 @@ class Solution {
             }
             else
             {
-               arr[s.charAt(i)-'a']--;
+               arr[t.charAt(i)-'a']--;
             }
         }
 
