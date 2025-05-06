@@ -1,5 +1,5 @@
 class MyStack {
-      private Queue<Integer> q;
+      private LinkedList<Integer> q;
 
     public MyStack() {
 
