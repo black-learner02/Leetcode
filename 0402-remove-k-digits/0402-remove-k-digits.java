@@ -6,12 +6,19 @@ class Solution {
        for(int i=0;i<num.length();i++)
        {
         char ch=num.charAt(i);
+        if(i==0)
+        {
+            st.push(ch);
+        }
+        else
+        {
         while(!st.isEmpty() && k>0 && st.peek()-'0'>ch-'0')
         {
             st.pop();
             k--;
         }
         st.push(ch);
+        }
        }
 
        while(k>0)
