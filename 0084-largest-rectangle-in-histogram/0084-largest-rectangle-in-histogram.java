@@ -1,58 +1,32 @@
 class Solution {
     public int largestRectangleArea(int[] heights) {
 
-         int[] nse = findNSE(heights);
-
-         int[] pse = findPSE(heights);
-          
-         int total=0;
-         for(int i=0;i<heights.length;i++)
-         {
-            int widht=nse[i]-pse[i]-1;
-            int area=heights[i]*widht;
-            total=Math.max(area,total);
-         } 
-
-         return total; 
-        
-    }
-
-     public static int[] findNSE(int[] arr)
-     {
-        int[] res = new int[arr.length];
-        int n=arr.length;
         Stack<Integer> st = new Stack<>();
 
-        for(int i=n-1;i>=0;i--)
+        int maxArea=0;
+
+        for(int i=0;i<heights.length;i++)
         {
-            while(!st.isEmpty() && arr[st.peek()]>arr[i])
-            {
-                st.pop();
+           while(!st.isEmpty() && heights[st.peek()]>heights[i])
+           {
+            int ele=heights[st.pop()];
+            int pse=st.isEmpty()?-1:st.peek();
+            int nse=i;
+ 
+            maxArea=Math.max(maxArea,ele*(nse-pse-1));
             }
-
-            res[i]=st.isEmpty()?n:st.peek();
-
             st.push(i);
+
         }
-        return res;
-     }
 
-      public static int[] findPSE(int[] arr)
-     {
-        Stack<Integer> st = new Stack<>();
-        int[] psee = new int[arr.length];
+        while (!st.isEmpty()) {
+            int ele = heights[st.pop()];
+            int pse = st.isEmpty() ? -1 : st.peek();
+            int nse = heights.length; // End of array
 
-         for(int i=0;i<arr.length;i++)
-         {
-            while(!st.isEmpty() && arr[st.peek()]>=arr[i])
-            {
-                st.pop();
-            }
+            maxArea = Math.max(maxArea, ele * (nse - pse - 1));
+        }
 
-            psee[i]=st.isEmpty()?-1:st.peek();
-
-            st.push(i);
-         }
-         return psee;
+         return maxArea;
      } 
 }
