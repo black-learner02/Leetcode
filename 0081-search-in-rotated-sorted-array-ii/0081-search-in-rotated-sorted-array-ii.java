@@ -13,10 +13,10 @@ class Solution {
             {
                 return true;
             }
-            if(nums[mid]==nums[low])
+            if(nums[mid]==nums[low] && nums[high]==nums[mid])
             {
                 low++;
-              //  high--;
+               high--;
                 continue;
             } 
             if(nums[low]<=nums[mid])
