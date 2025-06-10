@@ -8,11 +8,11 @@ class Solution {
         {
             int mid=(low+high)/2;
              min=Math.min(min,nums[mid]);
-            if(nums[low]<nums[high])
+           /* if(nums[low]<nums[high])
             {
                 min=Math.min(min,nums[low]);
                 break;
-            }
+            }*/
 
             if(nums[mid]>nums[high])
             {
