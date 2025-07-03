@@ -15,6 +15,7 @@ class Solution {
             if (len - max > k) {
                 map.put(s.charAt(i), map.get(s.charAt(i)) - 1);
                 i++;
+                max=map.get(s.charAt(i));
             }
 
             res = Math.max(res, j - i + 1);
