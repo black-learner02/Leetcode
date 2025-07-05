@@ -1,7 +1,7 @@
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
 
-     /* int res=0;
+      int res=0;
 
       int i=0;
       int j=0;
@@ -39,9 +39,10 @@ class Solution {
         j++;
       }
 
-      return res;*/
+      return res;
+    }
 
-      int[] arr = new int[nums.length];
+   /*   int[] arr = new int[nums.length];
 
       for(int i=0;i<nums.length;i++)
       {
@@ -89,5 +90,6 @@ class Solution {
         }
 
        return res;
-    }
+    }*/
+
 }
