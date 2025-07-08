@@ -5,22 +5,18 @@ class Solution {
 
         int j=0;
 
-        HashMap<Character,Integer> map = new HashMap<>();
-       
+        int[] lastSeen = {-1,-1,-1};
 
         while(j<s.length())
         {
-            char ch=s.charAt(j);
-            map.put(ch,j);
+            char ch = s.charAt(j);
+            lastSeen[ch-'a']=j;
 
-            if(map.size()==3)
+            if(lastSeen[0]!=-1 && lastSeen[0]!=-1 && lastSeen[0]!=-1)
             {
-            int i=Integer.MAX_VALUE;
-            i=Math.min(i,map.get('a'));
-            i=Math.min(i,map.get('b'));
-            i=Math.min(i,map.get('c'));
-
-                res=res+(i-0+1);
+                int min=Math.min(lastSeen[0],lastSeen[1]);
+                min=Math.min(min,lastSeen[2]);
+                res+=min-0+1;
             }
             j++;
         }
