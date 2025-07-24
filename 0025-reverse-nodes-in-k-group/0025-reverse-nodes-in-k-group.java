@@ -13,7 +13,7 @@ class Solution {
 
         ListNode dummy = new ListNode();
 
-        ListNode temp=head;
+        ListNode temp=dummy;
         ListNode prev=dummy;
 
 
@@ -23,7 +23,7 @@ class Solution {
         {
             int t=k;
 
-            t--;
+           
 
 
             while(t!=0)
@@ -39,7 +39,7 @@ class Solution {
             temp=hd;
             temp.next=miss;
             prev=temp;
-            temp=miss;
+            //temp=miss;
         }
 
       return dummy.next;
@@ -65,7 +65,7 @@ class Solution {
     public boolean check(ListNode head,int k)
     {
         ListNode temp=head;
-        k--;
+     //   k--;
 
         while(k!=0 && temp!=null)
         {
