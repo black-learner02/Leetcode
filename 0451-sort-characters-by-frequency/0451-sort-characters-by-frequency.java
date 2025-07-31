@@ -12,21 +12,33 @@ class Solution {
             map.put(ch,map.getOrDefault(ch,0)+1);
          }
 
-         List<Map.Entry<Character,Integer>> list = new ArrayList(map.entrySet());
+        PriorityQueue<Character> q = new PriorityQueue<>((a,b)->{
 
-         list.sort((a,b)->b.getValue().compareTo(a.getValue()));
-
-         for(Map.Entry<Character,Integer> entry : list)
-         {
-            int end=entry.getValue();
-
-            for(int i=0;i<end;i++)
+            int freq=map.get(b)-map.get(a);
+            if(freq==0)
             {
-                res.append(entry.getKey());
+                return (int)a-b;
             }
-         }
+            return freq;
 
-         return res.toString();
+        });
+
+
+        q.addAll(map.keySet());
+
+       // StringBuilder res = new StringBuilder();
+
+        while(!q.isEmpty())
+        {
+            char temp=q.poll();
+
+            for(int i=0;i<map.get(temp);i++)
+            {
+                res.append(temp);
+            }
+        }
+
+        return res.toString();
         
     }
 }
