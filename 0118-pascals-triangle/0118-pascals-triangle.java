@@ -25,9 +25,7 @@ class Solution {
                     l.add(temp.get(j-1)+temp.get(j));
                 }
              }
-
              list.add(l);
-
           }
 
 
