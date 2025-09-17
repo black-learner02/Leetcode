@@ -7,8 +7,10 @@ class Solution  {
         {
             q.add(nums[i]);
         }
+
+        System.out.println(q);
        
-          int prev=0;
+          //int prev=0;
           int res=0;
 
           int temp=k;
