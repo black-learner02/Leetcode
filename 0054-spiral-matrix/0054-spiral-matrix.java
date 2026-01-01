@@ -12,7 +12,7 @@ class Solution {
         int right=m-1;
 
 
-        while(top<=bot || left<=right)
+        while(top<=bot && left<=right)
         {
           
           for(int i=left;i<=right;i++)
@@ -38,8 +38,6 @@ class Solution {
          
          if(left<=right)
          {
-
-         
           for(int i=bot;i>=top;i--)
           {
             list.add(matrix[i][left]);
