@@ -45,7 +45,7 @@ class Solution {
         }
 
         j++;
-        k--;
+       // k--;
         
             }
        }
