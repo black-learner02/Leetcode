@@ -19,20 +19,20 @@ class Solution {
 	public static String find(String s1,String s2)
 	{
 		int i=0;
-		int j=0;
-		int end=0;
-		
-		while(i<s1.length() && j<s2.length())
-		{
-			if(s1.charAt(i)!=s2.charAt(j))
-			{
-				break;
-			}
-			i++;
-			j++;
-			end++;
-		}
-		
-		return s1.substring(0,end);
+        int j=0;
+
+        while(i<s1.length() && j<s2.length())
+        {
+            if(s1.charAt(i)==s2.charAt(j))
+            {
+                i++;
+                j++;
+            }
+            else
+            {
+                break;
+            }
+        }
+         return s1.substring(0,j);
 	}
 }
